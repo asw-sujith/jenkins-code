@@ -1,10 +1,21 @@
-node{
-    stage('SCM checkout') {
-      git 'https://github.dxc.com/pupendra/DevOpsTest'
-    }
+pipeline {
+    agent any
     
-    stage('Compile-Package') {
-      sh 'mvn package'    
+    stages {
+        stage('Build') {
+            steps {
+                echo "building..."
+            }
+        }
+         stage('Test'){
+            steps {
+                echo 'testing...'
+            }
+         }
+          stage ('Deploy') {
+             steps{
+                    echo "deploying..."
+                }
+            }
+        }
     }
-
-}
