@@ -1,2 +1,2 @@
 # DevOpsTest
-DevOpsTest Repo
+DevOpsTest Repository
